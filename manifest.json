@@ -1,0 +1,20 @@
+{
+  "name": "Поздравление Илоне",
+  "short_name": "Поздравление",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff0f3",
+  "theme_color": "#ff6b9e",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

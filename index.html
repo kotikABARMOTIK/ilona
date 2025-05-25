@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀 Секреты Счастья Илоны! 🎀</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#ff6b9e">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <div class="message-popup hidden">
+        <div class="message-content">
+            <span class="close-message">&times;</span>
+            <p id="message-text"></p>
+        </div>
+    </div>
+
+    <div class="game-container">
+        
+        <!-- Главный экран -->
+        <div id="main-screen" class="screen">
+            <h1>🎀 С Днём Рождения Любимка! 🎀</h1>
+            <p><b>Открой шкатулку счастья и найди все секреты!</b></p>
+            <button id="start-btn"><b>Начать!</b></button>
+        </div>
+
+        <!-- Игра 1: Цветочная поляна -->
+        <div id="flower-game" class="screen hidden">
+            <h2>Собери букет счастья!</h2>
+            <p><b>Кликай на розочки, чтобы собрать 5 комплиментов.</b></p>
+            <div class="flower-bed"></div>
+            <p id="flower-counter">Собрано: 0/5</p>
+        </div>
+
+        <!-- Фото 1: После цветов -->
+        <div id="photo-screen-1" class="screen hidden">
+            <h2>💖 Ты – самая красивая! 💖</h2>
+            <div class="photo-frame">
+                <img src="/photos/ilona.jpg" alt="Фото 1">
+            </div>
+            <button class="next-btn" data-next="heart-game">Дальше →</button>
+        </div>
+
+        <!-- Игра 2: Собери сердечки -->
+        <div id="heart-game" class="screen hidden">
+            <h2>💖 Поймай 15 сердечек! 💖</h2>
+            <p>Лови их курсором, чтобы наполнить год любовью!</p>
+            <div class="heart-container"></div>
+            <p id="heart-counter">Собрано: 0/15</p>
+            <button class="next-btn" data-next="balloon-game">Дальше →</button>
+        </div>
+
+        <!-- Игра 3: Воздушные шарики -->
+        <div id="balloon-game" class="screen hidden">
+            <h2>Лопни 5 шариков!</h2>
+            <p>Каждый шарик — это предсказание на год 🎈</p>
+            <div class="balloons-container"></div>
+        </div>
+
+        <!-- Фото 2: После шариков -->
+        <div id="photo-screen-2" class="screen hidden">
+            <h2>🌸 Ты - заслуживаешь большего! 🌸</h2>
+            <div class="photo-frame">
+                <img src="/photos/ilonaa.jpg" alt="Фото 2">
+            </div>
+            <button class="next-btn" data-next="gift-game">Дальше →</button>
+        </div>
+
+        <!-- Игра 4: Найди подарки -->
+        <div id="gift-game" class="screen hidden">
+            <h2>🎁 Найди все подарки! 🎁</h2>
+            <p><b>Кликай на скрытые подарки, чтобы открыть сюрпризы!</b></p>
+            <div class="gift-scene"></div>
+            <p id="gift-counter">Найдено: 0/3</p>
+            <button class="next-btn" data-next="gallery-screen">Дальше →</button>
+        </div>
+
+        <!-- Фото-галерея -->
+        <div id="gallery-screen" class="screen hidden">
+            <h2>💖 Тут наши воспоминания. 💖</h2>
+            <div class="gallery-container">
+                <div class="gallery-slide active">
+                    <img src="../photos/vantuz.jpg" alt="Фото 1">
+                </div>
+                <div class="gallery-slide">
+                    <video src="/photos/YWKW_8e5QwH40fKqaGOf1A.mp4" controls></video>
+                </div>
+                <div class="gallery-slide">
+                    <video src="/photos/воспоминания.mp4" controls></video>
+                </div>
+                <div class="gallery-slide">
+                    <video src="/photos/valik.mp4" controls></video>
+                </div>
+            </div>
+            <div class="gallery-controls">
+                <button class="gallery-prev">← Назад</button>
+                <button class="gallery-next">Вперёд →</button>
+            </div>
+            <button class="next-btn" data-next="photo-screen-3">Дальше →</button>
+        </div>
+
+        <!-- Фото 3: Перед финалом -->
+        <div id="photo-screen-3" class="screen hidden">
+            <h2>🎀 Ты - делаешь мир ярче! 🎀</h2>
+            <div class="photo-frame">
+                <img src="/photos/ilonaaa.jpg" alt="Фото 3">
+            </div>
+            <button class="next-btn" data-next="final-screen">Узнай секрет уже →</button>
+        </div>
+
+        <!-- Финальный экран -->
+        <div id="final-screen" class="screen hidden">
+            <h1>💖Секрет счастья прост - это ТЫ!💖</h1>
+            <p><b>С Днём Рождения! Пусть этот год станет незабываемым! 💖</b></p>
+            <div class="surprise">
+                <img src="https://sun9-10.userapi.com/impf/MdSXpKjYpsnYQPupMyIA8-ix3vbj2eaRgfgcSg/8y6b-tu0mFQ.jpg?size=604x453&quality=96&sign=55d23797a1dac87c84d2030d58c1aa99&c_uniq_tag=ul7zA9eFlXn4onhyuJbFgZZR_XTVQ5Z-5zSw69nrvnY&type=album" alt="Поздравление!">
+            </div>
+            <button id="restart-btn"><b>Играть снова!</b></button>
+        </div>
+    </div>
+
+     <audio id="bg-music" loop>
+        <source src="/music/roblox music - nighttime break in.mp3" controls autoplay type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
